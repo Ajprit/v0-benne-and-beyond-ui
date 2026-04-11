@@ -21,7 +21,7 @@ export function Hero() {
               loop
             playsInline
           >
-            <source src="/Images/Dosavideo.mp4" type="video/mp4" />
+            <source src="/Dosavideo.mp4" type="video/mp4" />
           </video>
         </div>
 
