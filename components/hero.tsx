@@ -1,31 +1,48 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { MapPin, UtensilsCrossed } from "lucide-react"
 import Link from "next/link"
 
+const heroVideos = [
+  "/Images/Dosavideo.mp4",
+  "/Images/Dosavideo.mp4",
+  "/Images/Dosavideo.mp4",
+]
+
 export function Hero() {
+  const [currentVideo, setCurrentVideo] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentVideo((prev) => (prev + 1) % heroVideos.length)
+    }, 6000) // change every 6 sec
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section
       id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
     >
-      {/* Background Image with Overlay */}
+      {/* Background Video Slider */}
       <div className="absolute inset-0">
-  {/* Video Background */}
-          <div className="absolute inset-0 overflow-hidden">
-            <video
-              className="w-full h-full object-cover"
-              autoPlay
-              muted
-              loop
+        <div className="absolute inset-0 overflow-hidden">
+          <video
+            key={heroVideos[currentVideo]}
+            className="w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
             playsInline
           >
-            <source src="/Dosavideo.mp4" type="video/mp4" />
+            <source src={heroVideos[currentVideo]} type="video/mp4" />
           </video>
         </div>
 
-        {/* Overlay (keep this for readability) */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
       </div>
 
@@ -46,7 +63,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-card mb-6 text-balance leading-tight"
+          className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-card mb-6 leading-tight"
         >
           Benne & Beyond
         </motion.h1>
@@ -79,17 +96,39 @@ export function Hero() {
             href="#menu"
             className="group flex items-center gap-2 px-8 py-4 bg-accent text-accent-foreground rounded-full font-medium text-lg transition-all duration-300 hover:bg-accent/90 hover:scale-105 hover:shadow-xl"
           >
-            <UtensilsCrossed size={20} className="group-hover:rotate-12 transition-transform" />
+            <UtensilsCrossed
+              size={20}
+              className="group-hover:rotate-12 transition-transform"
+            />
             Explore Menu
           </Link>
+
           <Link
             href="#location"
             className="group flex items-center gap-2 px-8 py-4 bg-card/10 backdrop-blur-sm text-card border border-card/30 rounded-full font-medium text-lg transition-all duration-300 hover:bg-card/20 hover:scale-105"
           >
-            <MapPin size={20} className="group-hover:bounce transition-transform" />
+            <MapPin
+              size={20}
+              className="group-hover:bounce transition-transform"
+            />
             Get Directions
           </Link>
         </motion.div>
+      </div>
+
+      {/* Slider Dots */}
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+        {heroVideos.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentVideo(index)}
+            className={`w-3 h-3 rounded-full transition-all ${
+              currentVideo === index
+                ? "bg-white scale-125"
+                : "bg-white/40"
+            }`}
+          />
+        ))}
       </div>
 
       {/* Scroll Indicator */}
