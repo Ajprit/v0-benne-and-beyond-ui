@@ -4,7 +4,7 @@ import { useState, useRef } from "react"
 import { motion, AnimatePresence, useInView } from "framer-motion"
 import { Leaf } from "lucide-react"
 
-const categories = ["Dosa", "Idli", "Vada", "Coffee", "Specials"]
+const categories = ["Dosa", "Idli & Vada", "Coffee", "Specials"]
 
 const menuItems = {
   Dosa: [
@@ -53,21 +53,12 @@ const menuItems = {
       isVeg: true,
     },
     {
-      name: "Mini Idli Sambar",
-      description: "Bite-sized idlis dunked in aromatic sambar",
-      price: 90,
-      image: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=2940&auto=format&fit=crop",
-      isVeg: true,
-    },
-    {
       name: "Rava Idli",
       description: "Semolina idli with cashews and curry leaves",
       price: 85,
       image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=2940&auto=format&fit=crop",
       isVeg: true,
     },
-  ],
-  Vada: [
     {
       name: "Medu Vada",
       description: "Crispy on the outside, soft inside, made from urad dal",
@@ -75,27 +66,7 @@ const menuItems = {
       image: "https://images.unsplash.com/photo-1630383249896-424e482df921?q=80&w=2940&auto=format&fit=crop",
       isVeg: true,
     },
-    {
-      name: "Sambar Vada",
-      description: "Crispy vadas soaked in hot sambar, absolute comfort food",
-      price: 80,
-      image: "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?q=80&w=2940&auto=format&fit=crop",
-      isVeg: true,
-    },
-    {
-      name: "Dahi Vada",
-      description: "Soft vadas in creamy yogurt with sweet and tangy chutneys",
-      price: 90,
-      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?q=80&w=2940&auto=format&fit=crop",
-      isVeg: true,
-    },
-    {
-      name: "Masala Vada",
-      description: "Spiced chana dal fritters, perfect tea-time snack",
-      price: 60,
-      image: "https://images.unsplash.com/photo-1630383249896-424e482df921?q=80&w=2940&auto=format&fit=crop",
-      isVeg: true,
-    },
+    
   ],
   Coffee: [
     {

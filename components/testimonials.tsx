@@ -6,24 +6,24 @@ import { Star, Quote } from "lucide-react"
 
 const testimonials = [
   {
-    name: "Priya Sharma",
-    role: "Food Blogger",
+    name: "Meghana Gore",
+    role: "Regular Customer",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2940&auto=format&fit=crop",
-    content: "The masala dosa here is simply the best I have ever had! Crispy, flavorful, and served with the most delicious sambar. A true gem for South Indian food lovers.",
+    content: "Hello guys just wanted to share the food here at beyond benne is amazing we went there yesterday had Thatte podi idli podi benne dosa and plain benne dosa and filter coffee it was just amazing plz visit them for very good experience ❤️😍",
     rating: 5,
   },
   {
-    name: "Rahul Menon",
+    name: "ABDULLAH MIRSINGE",
     role: "Regular Customer",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop",
-    content: "Been coming here every weekend for the filter coffee. The ambiance is so warm and welcoming, feels like home away from home. Highly recommended!",
+    content: "being a dosa lover this was probably one of the best one’s I have ever eaten and that podi masala was🤌😋 Filter coffee was also Amazing . Would definitely recommend other to visit",
     rating: 5,
   },
   {
-    name: "Anita Krishnan",
+    name: "Girija",
     role: "Food Enthusiast",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2940&auto=format&fit=crop",
-    content: "Finally found a place that serves authentic South Indian breakfast! The idli-vada combo with their homemade chutneys is absolutely divine.",
+    content: "Went there for the second time and their dosas are soo soo good. Loved their garlic plain dosa(if you love spice go for it) filter coffee along with dosa is sucha vibe..highly recommended",
     rating: 5,
   },
 ]

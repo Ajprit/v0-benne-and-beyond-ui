@@ -78,8 +78,8 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={20} className="text-accent flex-shrink-0 mt-0.5" />
                 <span className="text-card/70">
-                  123, MG Road, Near City Mall<br />
-                  Bengaluru, Karnataka 560001
+                  6, Mangeshi Crystal Opp. Prem Auto Petrol Pump<br />
+                  Birla College Road Kalyan- 421301.
                 </span>
               </li>
               <li>

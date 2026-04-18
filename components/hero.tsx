@@ -7,8 +7,8 @@ import Link from "next/link"
 
 const heroVideos = [
   "/Images/Dosavideo.mp4",
-  "/Images/Dosavideo.mp4",
-  "/Images/Dosavideo.mp4",
+  "/Images/Dosaanimatev.mp4",
+  "/Images/DosavideoP2.mp4",
 ]
 
 export function Hero() {
@@ -17,7 +17,7 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentVideo((prev) => (prev + 1) % heroVideos.length)
-    }, 6000) // change every 6 sec
+    }, 4000) // change every 6 sec
 
     return () => clearInterval(interval)
   }, [])

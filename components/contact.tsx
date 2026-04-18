@@ -20,13 +20,13 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Address",
-    value: "123, MG Road, Near City Mall, Bengaluru",
+    value: "6, Mangeshi Crystal Opp. Prem Auto Petrol Pump<br />Birla College Road Kalyan- 421301.",
     href: "#location",
   },
   {
     icon: Clock,
     label: "Opening Hours",
-    value: "7:00 AM - 10:00 PM (All Days)",
+    value: "5:30 AM - 11:30 PM (All Days)",
     href: null,
   },
 ]
