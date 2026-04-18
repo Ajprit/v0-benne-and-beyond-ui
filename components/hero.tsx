@@ -17,7 +17,7 @@ export function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentVideo((prev) => (prev + 1) % heroVideos.length)
-    }, 4000) // change every 6 sec
+    }, 3100) // change every 6 sec
 
     return () => clearInterval(interval)
   }, [])
